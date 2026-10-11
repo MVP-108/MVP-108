@@ -1,0 +1,12 @@
+from collections import Counter
+
+genetic_code=("TACGGCTTACTAGCTGGCAAATCCTGAATCCGG")
+total_bases=len(genetic_code)
+
+genome_calculator=Counter(genetic_code)
+
+print("genetic analysis complete")
+for genome, count in genome_calculator.items():
+    print(f"total findings of genetic letter: {genome}: {count}")
+    percentage=round((count/total_bases)*100,2)
+    print(f"Percentage of genetic letter in gene: {genome}: {percentage}")
