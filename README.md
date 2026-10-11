@@ -1,7 +1,9 @@
 ## Hi there 👋
-
+This is my coding portfolio
+I started coding on 5/10/2026
+I am working on learning python to build code than can analyse genetic code
 <!--
-**MVP-108/MVP-108** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+MVP-108/MVP-108** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
