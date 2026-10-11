@@ -1,0 +1,43 @@
+#DNA
+dna_string=("AGTCGTTACGGTCATAGCCGATCGAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGC")
+tested_string=("AGTCGTTACGGTCATAGCCGATCCAGCTAGCTAGCTAGCTAGCAAGCTAGCTAGCCTCCTAGCTAGCTAGCTAGCTAGC")
+#libary
+from collections import Counter
+#fuction
+def count_bases(dna_string):
+    base_count = Counter(dna_string)
+    mutations = [i for i in range(len(tested_string)) if tested_string[i] != dna_string[i]]
+    new_letter = [tested_string[i] for i in mutations]
+    if mutations:
+        mutation_count = len(mutations)
+        total_bases = len(dna_string)
+        desity_percentage = (mutation_count / total_bases) * 100
+        if desity_percentage < 5:
+            stage= "Stage 1, mild mutation"
+        elif desity_percentage < 15:
+            stage= "Stage 2, moderate mutation"
+        elif desity_percentage < 25:
+            stage= "Stage 3, severe mutation"    
+        else:
+            stage= "Stage 4, critically severe mutation"
+        print("GENETIC SEQUENCE ANALYSIS COMPLETED:")
+        print(" ")
+        print(f"Mutation Stage: {stage}")
+        print(f"Mutation Density: {round(desity_percentage,2)}%")
+        print(f"Number of differences: {len(mutations)}")
+        print(f"mutated base: {[i+1 for i in mutations]}")
+        print(f"Mutated letters: {new_letter}")
+        print(f"Amount of DNA bases: {len(dna_string)}")
+        print(f"Amount of Adenine: {base_count['A']}")
+        print(f"Amount of Cytosine: {base_count['C']}")
+        print(f"Amount of Guanine: {base_count['G']}")
+        print(f"Amount of Thymine: {base_count['T']}")
+        print(f"{round((base_count['A']/len(dna_string))*100,2)}% of the sequence is Adenine")
+        print(f"{round((base_count['C']/len(dna_string))*100,2)}% of the sequence is Cytosine")
+        print(f"{round((base_count['G']/len(dna_string))*100,2)}% of the sequence is Guanine")
+        print(f"{round((base_count['T']/len(dna_string))*100,2)}% of the sequence is Thymine")
+    else:
+        print("GENETIC ANALYSIS COMPLETED:")
+        print(" ")
+        print("No differences found between the sequences.")
+count_bases(dna_string)

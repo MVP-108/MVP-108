@@ -1,0 +1,46 @@
+#school grades fuction
+def calculate_grades(grades):
+    value=sum(grades)/len(grades)
+    return value
+data_set=[63, 90, 90, 65, 71, 80, 99.5, 68, 75]
+#fuction referenced
+Scores = calculate_grades(data_set)
+
+print("GRADE SUMMARY:")
+print(" ")
+print(f"Your average grade is {round(Scores, 2)}%")
+#loop to determine grade
+if Scores >= 90:
+    print(f"You Highest grade is {max(data_set)}%")
+    print(f"You Lowest grade is {min(data_set)}%")
+    print("You have an A grade!")
+elif Scores >= 85:
+    print(f"You Highest grade is {max(data_set)}%")
+    print(f"You Lowest grade is {min(data_set)}%")
+    print("You have an A- grade!")    
+elif Scores >= 80:
+    print(f"You Highest grade is {max(data_set)}%")
+    print(f"You Lowest grade is {min(data_set)}%")
+    print("You have a B+ grade!")
+elif Scores >= 70:
+    print(f"You Highest grade is {max(data_set)}%")
+    print(f"You Lowest grade is {min(data_set)}%")
+    print(" ")
+    print("You have a B grade!")
+elif Scores >= 60:
+    print(f"You Highest grade is {max(data_set)}%")
+    print(f"You Lowest grade is {min(data_set)}%")
+    print(" ")
+    print("You have a C grade!")
+elif Scores >= 50:
+    print(f"You Highest grade is {max(data_set)}%")
+    print(f"You Lowest grade is {min(data_set)}%")
+    print(" ")
+    print("You have a D grade!")
+else:
+    print(f"Your Highest grade is {max(data_set)}%")
+    print(f"Your Lowest grade is {min(data_set)}%")
+    print(" ")
+    print("You have an F grade!")
+
+    calculate_grades(grades)

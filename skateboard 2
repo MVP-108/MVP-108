@@ -1,0 +1,20 @@
+#cost variables
+a=80
+b=2
+#function
+def skateboard(price, quantity):
+    total_cost = price * quantity
+    return total_cost
+Final_cost = skateboard(a, b)
+#front end
+if Final_cost > 100:
+    Final_cost = Final_cost - 10
+    print("SKATEBOARD PURCHASE SUMMARY:")
+    print(" ")
+    print(f"total cost is ${Final_cost} ,you get a discount of $10!")
+    print("thank you for your purchase!")
+else:
+    print("SKATEBOARD PURCHASE SUMMARY:")
+    print(" ")
+    print(f"total cost is ${Final_cost} ,no discount applied")
+    print("thank you for your purchase!")
